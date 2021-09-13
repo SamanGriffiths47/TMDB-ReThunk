@@ -1,9 +1,5 @@
-import Movies from '../components/Movies'
+import React from 'react'
 
-export default function Home(props) {
-  return (
-    <div>
-      <Movies />
-    </div>
-  )
+export default function Home() {
+  return <section className="home"></section>
 }

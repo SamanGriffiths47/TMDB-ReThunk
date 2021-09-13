@@ -1,8 +1,13 @@
-import { Route, Switch } from 'react-router'
+import { Route } from 'react-router'
 import { connect } from 'react-redux'
-import Home from './pages/Home'
 import './styles/App.css'
-import Selections from './pages/Selections'
+import Nav from './components/Nav'
+import Home from './pages/Home'
+import { LoadDiscoverMovies } from './store/actions/MovieActions'
+import { useEffect } from 'react'
+import MovieRoutes from './pages/movies/MovieRoutes'
+import DiscoverMovies from './pages/movies/DiscoverMovies'
+import DiscoverMoviesSelection from './components/movies/discover/DiscoverMoviesSelection'
 
 const mapStateToProps = ({ movieState }) => {
   return {
@@ -10,23 +15,45 @@ const mapStateToProps = ({ movieState }) => {
   }
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchDiscoverMovies: () => dispatch(LoadDiscoverMovies())
+  }
+}
+
 function App(props) {
+  useEffect(() => {
+    props.fetchDiscoverMovies()
+  }, [])
+
   return (
     <div className="App">
-      <h3>Redux Thunk Practice</h3>
-
+      <Nav />
+      <h1>TMDB ReThunk</h1>
       <main>
-        <Switch>
-          <Route exact path="/" component={Home} />
+        <Route exact path="/" render={(...props) => <Home {...props} />} />
+        <Route
+          exact
+          path="/movies"
+          render={(...props) => <MovieRoutes {...props} />}
+        />
+        <Route
+          path="/movies/discover"
+          render={(...props) => <DiscoverMovies {...props} />}
+        />
+        {props.movieState.discoverMovies.map((movie) => (
           <Route
             exact
-            path={`/movies/${props.movieState.selection.title}`}
-            component={Selections}
+            path={`/movies/discover/${movie.original_title}`}
+            key={movie.id}
+            render={(...props) => (
+              <DiscoverMoviesSelection {...props} movie={movie} />
+            )}
           />
-        </Switch>
+        ))}
       </main>
     </div>
   )
 }
 
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App)

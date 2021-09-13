@@ -1,16 +1,22 @@
-const { GET_MOVIES, GET_SELECTION } = require('../types')
+const { GET_DISCOVER_MOVIES, SAVE_RATING } = require('../types')
 
 const iState = {
-  movies: [],
-  selection: {}
+  discoverMovies: [],
+  movieRatings: {}
 }
 
 export default function MovieReducer(state = iState, action) {
   switch (action.type) {
-    case GET_MOVIES:
-      return { ...state, movies: action.payload }
-    case GET_SELECTION:
-      return { ...state, selection: action.payload }
+    case GET_DISCOVER_MOVIES:
+      return { ...state, discoverMovies: action.payload }
+    case SAVE_RATING:
+      return {
+        ...state,
+        movieRatings: {
+          ...state.movieRatings,
+          [action.payload[0]]: [action.payload[1]]
+        }
+      }
     default:
       return { ...state }
   }
