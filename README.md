@@ -1,38 +1,19 @@
-# React Redux Middleware Practice
+# TMDB ReThunk :film_strip::movie_camera:
+### Created By: Sam'an Griffiths :thinking::thought_balloon:
 
-![Walt](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FR3S6MfUoKvBVS%2Fgiphy.gif&f=1&nofb=1)
+![TMDB ReThunk Screenshot](./src/styles/images/screenshot.png)
 
 ## Overview
-We'll be building a  React app that uses a movie and TV API!  We'll use Redux and Thunk to manage our state.
+****
 
-## Getting Started
-- `fork` and `clone`
-- `npm i` to install our dependencies
-- `npm install axios redux react-redux redux-thunk` to install the middleware we'll need
-- Create a services directory. It should contain all of your axios requests.
-- Create a components directory.
-- Set up your store, reducers, types, and actions.
+This website was my first attempt at using React Router in conjuction with Redux and Thunk (hence, the name haha). I had a lot of fun revisiting the idea of querying the [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction) for information to display. I also tried to think a little bit outside of the box on the design, opting for a scrollable side menu from which users may choose a title.
 
-## Initial Setup
-We'll be building a React app utilizing the `TMDB V3` API found **[here](https://developers.themoviedb.org/3/getting-started/introduction)**.
+### My Favorite Code Block:
 
-Sign up for an account and create an API key. Store the API key in a `.env` file for this lab. Remember, React env variables must have `REACT_APP` prepending whatever you call your environment variable. You can either use `react-router` or build a single page app utilizing multiple components.
+![Screenshot of Code for User Rating Component](./src/styles/images/ratingScreenShot.png)
+My favorit code block is the component I used to record and display user ratings (comb through the `components` folder to see the whole thing), mainly because this was the feature I had the hardest time nailing down. I believe this was my first attempt at really saving state so that a user might leave a page they interacted with, come back, and the state would still reflect their changes. I had an especially tough time finding, cropping and styling the star images so that it actually looked somewhat professional. The functions in charge of the proper mouseover effects also challenged my patience and confidence as a software engineer.
 
-![Jessie](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FBfPDcJAwbSeyc%2Fgiphy.gif&f=1&nofb=1)
-
-## Requirements
-- Must have a list displaying either movies or TV shows
-- Must have a detailed view for a single movie or TV show
-- Must use axios, redux, redux-thunk, and react-redux
-
-## Bonus
-- Be able to search for movies or TV shows
-- Display reviews for movies or TV shows
-- Have a trending list
-- Be able to add movies or TV shows to a watch list
-
-![Over](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2Ft8QSeqwoy0Ol2%2Fgiphy.gif&f=1&nofb=1)
-
-## Resources
-- [Redux Mapping State & Props](https://github.com/SEI-R-4-26/u4_lesson_mapping_state_props)
-- [Redux Middleware](https://github.com/SEI-R-4-26/u4_lesson_redux_middleware)
+<div align=center>
+  <a href='https://www.linkedin.com/in/saman-griffiths/' target='_blank'>LinkedIn</a> | <a href='' target='_blank'>Portfolio
+  </a> | <a href='https://tmdb-search.vercel.app/'>Deployed Site</a>
+  </div>

@@ -159,7 +159,6 @@ const Rating = (props) => {
             >
               <img src={rightFilledStar} alt="star" className="star filled" />
               <img src={rightEmptyStar} alt="star" className="star empty" />
-              {/* {deleteButton(i)} */}
             </div>
           </div>
         )
