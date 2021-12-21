@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import rightEmptyStar from '../../styles/images/empty_star_right.png'
 import leftEmptyStar from '../../styles/images/empty_star_left.png'
 import rightFilledStar from '../../styles/images/filled_star_right.png'

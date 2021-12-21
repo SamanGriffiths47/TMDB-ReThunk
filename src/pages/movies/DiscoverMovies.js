@@ -1,4 +1,3 @@
-import React from 'react'
 import DiscoverMoviesList from '../../components/movies/discover/DiscoverMoviesList'
 
 function DiscoverMovies() {

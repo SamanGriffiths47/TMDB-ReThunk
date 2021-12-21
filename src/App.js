@@ -4,13 +4,12 @@ import './styles/App.css'
 import Nav from './components/Nav'
 import Home from './pages/Home'
 import { LoadDiscoverMovies } from './store/actions/MovieActions'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import DiscoverMovies from './pages/movies/DiscoverMovies'
 import DiscoverMoviesSelection from './components/movies/discover/DiscoverMoviesSelection'
 import { LoadDiscoverShows } from './store/actions/TVShowActions'
 import DiscoverShows from './pages/shows/DiscoverShows'
 import DiscoverShowsSelection from './components/shows/discover/DiscoverShowsSelection'
-import { useHistory } from 'react-router-dom'
 
 const mapStateToProps = ({ movieState, TVState }) => {
   return {
