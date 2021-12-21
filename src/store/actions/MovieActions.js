@@ -1,11 +1,11 @@
-import { GetDiscoverMovies, GetGenres } from '../../services/MovieServices'
-import { GET_DISCOVER_MOVIES, SAVE_RATING } from '../types'
+import { DiscoverMovies, GetMovieGenres } from '../../services/MovieServices'
+import { GET_MOVIES, SAVE_MOVIE_RATING } from '../types'
 
 export const LoadDiscoverMovies = () => {
   return async (dispatch) => {
     try {
-      const movies = await GetDiscoverMovies()
-      const genres = await GetGenres()
+      const movies = await DiscoverMovies()
+      const genres = await GetMovieGenres()
       const arr = []
 
       function mapGenresToMovies() {
@@ -27,7 +27,7 @@ export const LoadDiscoverMovies = () => {
       }
       mapGenresToMovies()
       arr.sort((a, b) => (a.original_title > b.original_title ? 1 : -1))
-      dispatch({ type: GET_DISCOVER_MOVIES, payload: arr })
+      dispatch({ type: GET_MOVIES, payload: arr })
     } catch (error) {
       throw error
     }
@@ -37,7 +37,7 @@ export const LoadDiscoverMovies = () => {
 export const SaveRating = (title, rating) => {
   return async (dispatch) => {
     try {
-      dispatch({ type: SAVE_RATING, payload: [title, rating] })
+      dispatch({ type: SAVE_MOVIE_RATING, payload: [title, rating] })
     } catch (error) {
       throw error
     }

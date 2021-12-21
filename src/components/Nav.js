@@ -4,8 +4,7 @@ import { NavLink } from 'react-router-dom'
 export default function Nav() {
   return (
     <nav className="navbar">
-      <NavLink to="/movies">Movies</NavLink>
-      <NavLink to="/movies">TV Shows</NavLink>
+      <NavLink to="/">TMDB ReThunk</NavLink>
     </nav>
   )
 }

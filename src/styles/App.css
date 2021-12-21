@@ -16,18 +16,12 @@ body {
 .navbar {
   grid-area: 1/1/2/2;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-size: 4vw;
   height: 12vh;
   background: linear-gradient(#422515, #422515d7, #42251593, #42251500);
-  /* background-color: #422515; */
-}
-.navbar > * {
-  padding: 1vh;
-  margin-left: 6vw;
-  margin-right: 6vw;
-  margin-top: -3vh;
+  /* padding-bottom: 7vh; */
 }
 h1 {
   grid-area: 2/1/3/2;
@@ -39,9 +33,10 @@ main {
   grid-area: 3/1/4/2;
   display: grid;
   grid-template: auto / 25vw 75vw;
-  /* grid-template-columns: 28vw / 72vw; */
-  height: 80vh;
-  /* width: 100vw; */
+  height: 85.5vh;
+}
+nav a {
+  margin-top: -2vh;
 }
 a:link {
   text-decoration: none;
@@ -62,6 +57,10 @@ a:active {
 .list_wrap {
   width: 25vw;
   height: inherit;
+}
+.navItem {
+  font-size: 2.5vw;
+  margin: 3vw 0;
 }
 .list {
   grid-area: 1/1/2/2;
@@ -206,4 +205,8 @@ a:active {
   align-self: center;
   margin-bottom: 0.5vh;
   height: 2.5vh;
+}
+.home {
+  text-align: center;
+  vertical-align: middle;
 }

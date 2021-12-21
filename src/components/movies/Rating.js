@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import rightEmptyStar from '../styles/images/empty_star_right.png'
-import leftEmptyStar from '../styles/images/empty_star_left.png'
-import rightFilledStar from '../styles/images/filled_star_right.png'
-import leftFilledStar from '../styles/images/filled_star_left.png'
-import { SaveRating } from '../store/actions/MovieActions'
+import rightEmptyStar from '../../styles/images/empty_star_right.png'
+import leftEmptyStar from '../../styles/images/empty_star_left.png'
+import rightFilledStar from '../../styles/images/filled_star_right.png'
+import leftFilledStar from '../../styles/images/filled_star_left.png'
+import { SaveRating } from '../../store/actions/MovieActions'
 import { connect } from 'react-redux'
 
 const mapStateToProps = ({ movieState }) => {

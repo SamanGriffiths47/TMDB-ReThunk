@@ -1,4 +1,4 @@
-const { GET_DISCOVER_MOVIES, SAVE_RATING } = require('../types')
+const { GET_MOVIES, SAVE_MOVIE_RATING } = require('../types')
 
 const iState = {
   discoverMovies: [],
@@ -7,9 +7,9 @@ const iState = {
 
 export default function MovieReducer(state = iState, action) {
   switch (action.type) {
-    case GET_DISCOVER_MOVIES:
+    case GET_MOVIES:
       return { ...state, discoverMovies: action.payload }
-    case SAVE_RATING:
+    case SAVE_MOVIE_RATING:
       return {
         ...state,
         movieRatings: {

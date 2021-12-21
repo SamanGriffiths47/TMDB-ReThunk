@@ -1,7 +1,7 @@
 //movie types
-export const GET_DISCOVER_MOVIES = 'GET_DISCOVER_MOVIES'
-export const GET_GENRES = 'GET_GENRES'
-export const SAVE_RATING = 'SAVE_RATING'
+export const GET_MOVIES = 'GET_MOVIES'
+export const SAVE_MOVIE_RATING = 'SAVE_MOVIE_RATING'
 
 //tv show types
-export const GET_TVSHOWS = 'GET_TVSHOWS'
+export const GET_SHOWS = 'GET_SHOWS'
+export const SAVE_SHOW_RATING = 'SAVE_SHOW_RATING'

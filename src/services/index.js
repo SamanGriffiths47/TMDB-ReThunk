@@ -1,8 +1,7 @@
 import Axios from 'axios'
 
 export const Client = Axios.create({
-  baseURL: `https://api.themoviedb.org/3`,
-  headers: { Authorization: `Bearer ${process.env.REACT_APP_KEY}` }
+  baseURL: `https://api.themoviedb.org/3`
 })
 
 export const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w500'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { IMG_BASE_URL } from '../../../services'
-import Rating from '../../Rating'
+import Rating from '../Rating'
 
 export default function DiscoverMoviesSelection(props) {
   const movie = props.movie

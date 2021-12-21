@@ -16,8 +16,8 @@ const DiscoverMoviesList = (props) => {
       <div className="listDisplay">
         {props.movieState.discoverMovies.map((movie) => (
           <div key={movie.id} className="listItem">
-            <Link to={`/movies/discover/${movie.original_title}`}>
-              <h3>{movie.original_title}</h3>
+            <Link to={`/movies/discover/${movie.title}`}>
+              <h3>{movie.title}</h3>
             </Link>
           </div>
         ))}
