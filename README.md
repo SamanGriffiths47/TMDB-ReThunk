@@ -11,6 +11,7 @@ This website was my first attempt at using React Router in conjuction with Redux
 ### My Favorite Code Block:
 
 ![Screenshot of Code for User Rating Component](./src/styles/images/ratingScreenShot.png)
+
 My favorit code block is the component I used to record and display user ratings (comb through the `components` folder to see the whole thing), mainly because this was the feature I had the hardest time nailing down. I believe this was my first attempt at really saving state so that a user might leave a page they interacted with, come back, and the state would still reflect their changes. I had an especially tough time finding, cropping and styling the star images so that it actually looked somewhat professional. The functions in charge of the proper mouseover effects also challenged my patience and confidence as a software engineer.
 
 <div align=center>
