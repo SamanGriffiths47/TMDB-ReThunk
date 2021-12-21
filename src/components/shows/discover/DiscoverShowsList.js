@@ -8,7 +8,6 @@ const mapStateToProps = ({ TVState }) => {
 }
 
 const DiscoverShowsList = (props) => {
-  console.log(props.TVState)
   return (
     <section className="list">
       <h2>List</h2>
