@@ -32,8 +32,8 @@ h1 {
 main {
   grid-area: 3/1/4/2;
   display: grid;
-  grid-template: auto / 25vw 75vw;
-  height: 85.5vh;
+  grid-template: 100% / 25vw 75vw;
+  height: 88vh;
 }
 nav a {
   margin-top: -2vh;
@@ -55,8 +55,8 @@ a:active {
   color: #422515;
 }
 .list_wrap {
-  width: 25vw;
-  height: inherit;
+  width: 100%;
+  height: 100%;
 }
 .navItem {
   font-size: 2.5vw;
@@ -85,7 +85,7 @@ a:active {
   justify-content: flex-start;
   align-items: center;
   justify-self: flex-end;
-  overflow-y: scroll;
+  overflow: scroll;
   margin-top: 1vh;
   padding: 1vw;
   height: calc(101% - 1vh - 2vw);
@@ -107,7 +107,7 @@ a:active {
   display: grid;
   grid-template: 5% 95% / 100%;
   height: inherit;
-  width: 75vw;
+  width: 100%;
 }
 .selection > h2 {
   margin: 0;
@@ -115,16 +115,25 @@ a:active {
   /* margin-right: vw; */
 }
 .selectionDisplay {
+  grid-area: 2/1/3/2;
   display: grid;
   grid-template: 1fr / 50% 50%;
   width: inherit;
   height: 100%;
 }
+#defaultDisplay {
+  grid-area: 1/1/3/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#defaultDisplay > img {
+  border-radius: 999px;
+  border: 5vw #1e5ec3;
+  height: 80%;
+}
 .selectionDisplay > * {
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-  margin-left: 1vw;
-  margin-right: 1vw;
+  margin: 2vh 1vw;
   width: calc(100% - 2vw);
   height: calc(100% - 4vh);
 }
@@ -209,4 +218,28 @@ a:active {
 .home {
   text-align: center;
   vertical-align: middle;
+}
+
+@media (orientation: portrait) {
+  main {
+    grid-template: 10% 90% / 1fr;
+  }
+  .list_wrap {
+    grid-area: 1/1/2/2;
+  }
+  .list {
+    grid-template: 1fr 1fr / 25vw 75vw;
+  }
+  .list > h2 {
+    grid-area: 1/1/2/2;
+  }
+  .list > p {
+    grid-area: 2/1/3/2;
+  }
+  .list > div {
+    grid-area: 1/2/3/3;
+  }
+  .selection {
+    grid-area: 2/1/3/2;
+  }
 }

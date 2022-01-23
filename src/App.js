@@ -2,7 +2,7 @@ import { Route } from 'react-router'
 import { connect } from 'react-redux'
 import './styles/App.css'
 import Nav from './components/Nav'
-import Home from './pages/Home'
+import HomeNav from './pages/HomeNav'
 import { LoadDiscoverMovies } from './store/actions/MovieActions'
 import { useEffect } from 'react'
 import DiscoverMovies from './pages/movies/DiscoverMovies'
@@ -10,6 +10,7 @@ import DiscoverMoviesSelection from './components/movies/discover/DiscoverMovies
 import { LoadDiscoverShows } from './store/actions/TVShowActions'
 import DiscoverShows from './pages/shows/DiscoverShows'
 import DiscoverShowsSelection from './components/shows/discover/DiscoverShowsSelection'
+import { HomeDisplay } from './pages/HomeDisplay'
 
 const mapStateToProps = ({ movieState, TVState }) => {
   return {
@@ -35,11 +36,25 @@ function App(props) {
     <div className="App">
       <Nav />
       <main>
-        <Route exact path="/" render={(...props) => <Home {...props} />} />
+        <Route exact path="/" render={(...props) => <HomeNav {...props} />} />
+
+        <Route
+          exact
+          path="/"
+          render={(...props) => <HomeDisplay {...props} />}
+        />
+
+        <Route
+          exact
+          path="/:category/discover"
+          render={(...props) => <HomeDisplay {...props} />}
+        />
+
         <Route
           path="/movies/discover"
           render={(...props) => <DiscoverMovies {...props} />}
         />
+
         {props.movieState.discoverMovies.map((movie) => (
           <Route
             exact
@@ -50,10 +65,12 @@ function App(props) {
             )}
           />
         ))}
+
         <Route
           path="/shows/discover"
           render={(...props) => <DiscoverShows {...props} />}
         />
+
         {props.TVState.discoverShows.map((show) => (
           <Route
             exact

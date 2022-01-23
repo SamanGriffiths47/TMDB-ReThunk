@@ -10,7 +10,7 @@ export const LoadDiscoverMovies = () => {
 
       function mapGenresToMovies() {
         movies.map((movie) => {
-          genres.map((genre) => {
+          genres.forEach((genre) => {
             const check = movie.genre_ids.indexOf(genre.id)
             if (check > -1) {
               if ('genres' in movie) {

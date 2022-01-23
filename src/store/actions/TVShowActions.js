@@ -10,7 +10,7 @@ export const LoadDiscoverShows = () => {
 
       function mapGenresToShows() {
         shows.map((show) => {
-          genres.map((genre) => {
+          genres.forEach((genre) => {
             const check = show.genre_ids.indexOf(genre.id)
             if (check > -1) {
               if ('genres' in show) {
