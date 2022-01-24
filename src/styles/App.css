@@ -24,7 +24,6 @@ body {
   font-size: 4vw;
   height: 12vh;
   background: linear-gradient(#422515, #422515d7, #42251593, #42251500);
-  /* padding-bottom: 7vh; */
 }
 h1 {
   grid-area: 2/1/3/2;
