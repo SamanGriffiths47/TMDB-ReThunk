@@ -41,13 +41,16 @@ export default function DiscoverMoviesSelection(props) {
   }
   genreDisplay()
   return (
-    <section className="selection">
+    <section
+      className="selection"
+      style={{ '--poster': `url("${IMG_BASE_URL + movie.poster_path}")` }}
+    >
       <h2>Movie Info</h2>
       <div className="selectionDisplay">
         <div className="selectionImage">
           <img
             src={IMG_BASE_URL + movie.poster_path}
-            alt={`${movie.original_title} poster`}
+            alt={`${movie.title} poster`}
           />
         </div>
         <div className="selectionInfo">

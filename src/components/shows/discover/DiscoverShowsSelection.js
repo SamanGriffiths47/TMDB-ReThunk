@@ -56,7 +56,10 @@ export default function DiscoverShowsSelection(props) {
   }
   genreDisplay()
   return (
-    <section className="selection">
+    <section
+      className="selection"
+      style={{ '--poster': `url("${IMG_BASE_URL + show.poster_path}")` }}
+    >
       <h2>Show Info</h2>
       <div className="selectionDisplay">
         <div className="selectionImage">
